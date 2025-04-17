@@ -1,0 +1,13 @@
+@import "src/scss/_variables";
+
+.pool-form {
+  min-height: 620px;
+
+  @media screen and (min-width: $md) {
+    min-height: 640px;
+  }
+
+  @media screen and (min-width: $lg) {
+    min-height: 400px;
+  }
+}

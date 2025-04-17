@@ -1,0 +1,32 @@
+@import "src/scss/_variables";
+
+.features {
+  &__block {
+    .block__title {
+      font-size: 16px;
+      line-height: 19px;
+
+      @media screen and (min-width: $lg) {
+        font-size: 24px;
+        line-height: 28px;
+      }
+    }
+
+    .block__image {
+      height: 212px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    p {
+      font-size: 12px;
+      line-height: 14px;
+
+      @media screen and (min-width: $md) {
+        font-size: 16px;
+        line-height: 19px;
+      }
+    }
+  }
+}

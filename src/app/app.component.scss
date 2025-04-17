@@ -1,0 +1,31 @@
+::ng-deep {
+  .mat-drawer-container-has-open {
+    height: 100%;
+    overflow: hidden !important;
+  }
+}
+
+.app-modal {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  pointer-events: none;
+
+  &__snackbar,
+  &__popup,
+  &__wallet-connect {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    pointer-events: auto;
+  }
+
+  &__snackbar {
+    bottom: 2rem;
+    right: 2rem;
+    pointer-events: none;
+  }
+}

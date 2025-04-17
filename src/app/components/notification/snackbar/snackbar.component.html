@@ -1,0 +1,19 @@
+<div class="snackbar__wrapper">
+  <div [class]="'snackbar d-flex align-items-center bg-' + color">
+    <mat-icon class="snackbar__icon">{{ icon }}</mat-icon>
+    <ng-container *ngIf="modalService.snackbarPreset.link">
+      <a
+        [href]="modalService.snackbarPreset.link"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="snackbar__link flex-grow-1"
+      >
+        <p class="snackbar__text">{{ modalService.snackbarPreset.text }}</p>
+      </a>
+    </ng-container>
+    <ng-container *ngIf="!modalService.snackbarPreset.link">
+      <p class="snackbar__text flex-grow-1">{{ modalService.snackbarPreset.text }}</p>
+    </ng-container>
+    <mat-icon class="snackbar__close" (click)="modalService.closeSnackbar()">close</mat-icon>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+<section id="partners" class="partners wrapper padding margin">
+  <h2 class="partners__title title text-right">OUR PARTNERS</h2>
+  <div class="partners__block row d-none d-lg-flex">
+    <div
+      class="col-4 block__image d-flex align-items-center justify-content-center"
+      *ngFor="let part of partners; let i = index"
+      [attr.data-aos]="i == 0 ? 'fade-left' : i == 2 ? 'fade-right' : ''"
+      data-aos-easing="ease-out-cubic"
+      data-aos-duration="800"
+      data-aos-once="true"
+    >
+      <a [href]="part.link" target="_blank" rel="noopener noreferrer"
+        ><img [src]="part.darkImg" [alt]="part.name + ' logotype'"
+      /></a>
+    </div>
+  </div>
+
+  <div class="partners__block row d-block d-lg-none">
+    <div class="col-12 block__image d-flex align-items-center justify-content-center" *ngFor="let part of partners">
+      <a [href]="part.link" target="_blank" rel="noopener noreferrer"
+        ><img [src]="part.lightImg" [alt]="part.name + ' logotype'"
+      /></a>
+    </div>
+  </div>
+</section>

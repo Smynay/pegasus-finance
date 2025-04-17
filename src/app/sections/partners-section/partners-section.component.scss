@@ -1,0 +1,19 @@
+@import "src/scss/_variables";
+
+.partners {
+  &__title {
+    margin-bottom: 1rem;
+  }
+
+  &__block {
+    color: $light;
+
+    @media screen and (min-width: $lg) {
+      color: $dark;
+      background: #fff;
+      padding: 40px 65px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.33);
+      border-radius: 19px;
+    }
+  }
+}

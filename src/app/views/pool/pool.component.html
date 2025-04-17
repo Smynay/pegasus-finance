@@ -1,0 +1,40 @@
+<mat-drawer-container class="drawer" hasBackdrop="over">
+  <mat-drawer #drawer class="drawer-sidenav" mode="over">
+    <div class="drawer-sidenav__header d-flex justify-content-between align-items-center light mb-4">
+      <h2 class="title">Menu</h2>
+      <mat-icon (click)="drawer.close()">close</mat-icon>
+    </div>
+    <div class="drawer-sidenav__menu">
+      <p
+        class="title light mb-4"
+        *ngFor="let item of menuService.poolMenu"
+        (click)="drawer.close()"
+        [routerLink]="item.path"
+      >
+        {{ item.title }}
+      </p>
+    </div>
+  </mat-drawer>
+
+  <div class="drawer-sidenav-content d-flex flex-column">
+    <app-dashboard-header class="header w-100" (burgerClick)="drawer.toggle()"></app-dashboard-header>
+    <div class="content__box flex-grow-1">
+      <main>
+        <div class="content__wrapper overflow-hidden">
+          <div class="content">
+            <app-total-value-section></app-total-value-section>
+            <app-potfolio-section></app-potfolio-section>
+            <app-pool-form></app-pool-form>
+            <app-altcoins-section></app-altcoins-section>
+          </div>
+
+          <div class="decorations">
+            <div class="decore decore_first"></div>
+            <div class="decore decore_second"></div>
+          </div>
+        </div>
+      </main>
+      <app-footer apperance="dark" class="upper"></app-footer>
+    </div>
+  </div>
+</mat-drawer-container>

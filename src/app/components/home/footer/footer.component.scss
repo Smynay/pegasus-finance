@@ -1,0 +1,125 @@
+@import "src/scss/_variables";
+
+.footer {
+  &.blue {
+    background: $blue;
+  }
+
+  &.dark {
+    background: $dark;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    padding: 0 0.5rem;
+
+    @media screen and (min-width: $md) {
+      padding: 0 1rem;
+    }
+
+    @media screen and (min-width: $lg) {
+      height: 80px;
+    }
+  }
+
+  &__element {
+    display: flex;
+    height: 100%;
+    flex: 0 1 auto;
+    align-items: center;
+    justify-content: flex-end;
+
+    @media screen and (min-width: $lg) {
+      display: flex;
+      height: 100%;
+      flex: 0 1 33.333%;
+      align-items: center;
+      justify-content: center;
+      padding: 0 1rem;
+
+      &:first-child {
+        justify-content: flex-start;
+      }
+
+      &:last-child {
+        justify-content: flex-end;
+      }
+    }
+  }
+
+  &__logo {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    .logo {
+      height: 78%;
+    }
+
+    .logo-text {
+      height: 50%;
+    }
+  }
+
+  &__socials {
+    height: 20px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    @media screen and (min-width: $md) {
+      gap: 1rem;
+    }
+  }
+
+  &__soclink {
+    img {
+      height: 24px;
+
+      &:hover {
+        margin-bottom: 6px;
+      }
+    }
+  }
+
+  &__links {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    color: $light;
+    font-size: 9px;
+    line-height: 13px;
+
+    li {
+      display: inline-block;
+      margin-right: 0.5rem;
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+
+    @media screen and (min-width: $md) {
+      font-size: 10px;
+    }
+
+    @media screen and (min-width: $lg) {
+      font-size: 12px;
+    }
+  }
+
+  &__special {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

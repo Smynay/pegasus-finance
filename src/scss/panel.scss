@@ -1,0 +1,19 @@
+.panel {
+  color: $dark;
+  line-height: 47px;
+  padding: 0rem 1rem;
+  display: inline-block;
+  border-radius: 19px;
+  background: $light;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.33);
+
+  &_dark {
+    color: $light;
+    background: $dark;
+  }
+
+  &_blue {
+    color: $light;
+    background: $blue;
+  }
+}

@@ -1,0 +1,24 @@
+<header class="header container-fluid">
+  <div class="header__left d-flex align-items-center">
+    <div class="header__logo" routerLink="">
+      <img [src]="logo" class="logo" alt="Company logo" />
+      <img [src]="logoText" class="logo-text d-none d-lg-block" alt="Company logo text" />
+    </div>
+    <button type="button" class="btn button_link ml-4 dark d-none d-lg-block" [routerLink]="backProps[page].link">
+      {{ backProps[page].title }}
+    </button>
+  </div>
+
+  <div class="header__addition">
+    <app-language-selector></app-language-selector>
+    <button
+      type="button"
+      class="btn button_flat-dark d-none d-lg-block header__connect"
+      (click)="modalService.openWalletConnect()"
+    >
+      CONNECT YOUR WALLET
+    </button>
+    <button class="button button_flat-dark button_rounded d-lg-none" routerLink="/dashboard">APP</button>
+    <div class="header__burger d-lg-none" (click)="emitBurgerClick()"></div>
+  </div>
+</header>

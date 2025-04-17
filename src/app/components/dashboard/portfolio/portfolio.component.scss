@@ -1,0 +1,75 @@
+@import "src/scss/_variables";
+
+.portfolio {
+  background: $grey;
+
+  &__devider {
+    @media screen and (min-width: $lg) {
+      border-left: 1px solid rgba($dark, 0.33);
+      padding: 1rem 0;
+    }
+  }
+
+  &__chart {
+    max-height: 121px;
+    max-width: 121px;
+
+    @media screen and (min-width: $md) {
+      max-height: 175px;
+      max-width: 175px;
+    }
+
+    &.large {
+      @media screen and (min-width: $lg) {
+        max-width: none;
+        max-height: none;
+        width: 100%;
+        padding: 1rem;
+      }
+    }
+  }
+
+  &__panel {
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    line-height: 33px;
+
+    @media screen and (max-width: $md) {
+      padding-left: 0.8rem;
+      padding-right: 0.8rem;
+    }
+
+    @media screen and (min-width: $md) {
+      font-size: 12px;
+      line-height: 47px;
+    }
+
+    @media screen and (min-width: $lg) {
+      font-size: 19px;
+      line-height: 47px;
+    }
+
+    margin-bottom: 1rem;
+
+    &:last-child {
+      @media screen and (min-width: $lg) {
+        margin-bottom: 0;
+      }
+    }
+
+    hr {
+      color: $dark;
+      height: 1px;
+      width: 100%;
+      margin: 0.5rem;
+    }
+
+    &.special {
+      @media screen and (min-width: $lg) {
+        line-height: 54px;
+        height: 110px;
+      }
+    }
+  }
+}

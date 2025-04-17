@@ -1,0 +1,19 @@
+<div class="popup-wallet__wrapper d-flex flex-column">
+  <div class="popup-wallet__backdrop" (click)="modalService.closeModals()"></div>
+  <div class="popup-wallet">
+    <div class="popup-wallet__close" (click)="modalService.closeModals()">
+      <img src="../../../../assets/images/ui/shape.svg" alt="" />
+    </div>
+
+    <div class="popup-wallet__content blue">
+      <h2 class="popup-wallet__title m-0 mb-3">CONNECT YOUR WALLET</h2>
+
+      <button class="popup-wallet__button button button_outline-blue mb-3">
+        <img src="../../../assets/images/ui/metamask.svg" alt="" /> Metamask
+      </button>
+      <button class="popup-wallet__button button button_outline-blue">
+        <img src="../../../assets/images/ui/walletconnect.svg" alt="" /> WalletConnect
+      </button>
+    </div>
+  </div>
+</div>

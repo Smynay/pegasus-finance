@@ -1,0 +1,27 @@
+<section class="altcoins mb-4" id="altcoins">
+  <div class="altcoins__wrapper wrapper padding">
+    <h2 class="title_dashboard dark">Altcoins</h2>
+    <table class="table">
+      <thead class="table__head">
+        <tr class="blue">
+          <th class="icon" scope="col"></th>
+          <th class="symbol" scope="col">Name</th>
+          <th scope="col">Price (24h %):</th>
+          <th scope="col">% of token in pool</th>
+          <th scope="col">My balance now:</th>
+        </tr>
+      </thead>
+      <tbody class="dark">
+        <tr *ngFor="let coin of altcoinsInfo">
+          <td><img class="table__ico" [src]="coin.icon || tokenIco" alt="Token icon" /></td>
+          <td class="font-weight-bold">{{ coin.symbol }}</td>
+          <td>
+            $0.75 <span [ngClass]="{ red: coin.change <= 0, green: coin.change > 0 }">({{ coin.change }}%)</span>
+          </td>
+          <td>{{ coin.percentage.toFixed(1) }}%</td>
+          <td>$300 ({{ coin.userholdings }} DAI)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>

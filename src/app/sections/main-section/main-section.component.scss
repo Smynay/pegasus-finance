@@ -1,0 +1,88 @@
+@import "src/scss/_variables";
+
+.main-section {
+  color: white;
+  position: relative;
+  padding: 35px 28px;
+
+  @media screen and (min-width: $md) {
+    min-height: 352px;
+  }
+
+  @media screen and (min-width: $lg) {
+    padding: 110px 65px;
+    min-height: 550px;
+  }
+
+  &__header {
+    margin-bottom: 35px;
+    font-size: 21px;
+    line-height: 25px;
+    font-weight: 500;
+
+    @media screen and (min-width: $md) {
+      max-width: 65%;
+      font-size: 30px;
+      line-height: 35px;
+    }
+
+    @media screen and (min-width: $lg) {
+      font-size: 42px;
+      line-height: 49px;
+    }
+  }
+
+  &__paragraph {
+    z-index: 1;
+    font-size: 12px;
+    line-height: 14px;
+
+    .count {
+      font-size: 22px;
+      line-height: 30px;
+    }
+
+    @media screen and (min-width: $md) {
+      font-size: 22px;
+      line-height: 26px;
+    }
+
+    @media screen and (min-width: $lg) {
+      font-size: 24px;
+      line-height: 28px;
+
+      .count {
+        font-size: 42px;
+        line-height: 49px;
+      }
+    }
+  }
+
+  .lg-accent {
+    @media screen and (min-width: $lg) {
+      color: $accent;
+    }
+  }
+
+  &__image {
+    position: absolute;
+    min-width: 120px;
+    width: 30%;
+    left: 60%;
+    bottom: 14%;
+    z-index: 0;
+
+    @media screen and (min-width: $md) {
+      bottom: 0px;
+      min-width: 200px;
+      max-width: 250px;
+    }
+
+    @media screen and (min-width: $lg) {
+      bottom: 0px;
+      width: 40%;
+      min-width: 250px;
+      max-width: 410px;
+    }
+  }
+}

@@ -1,0 +1,106 @@
+@import "src/scss/_variables";
+
+.padding {
+  padding: 15px;
+
+  @media screen and (min-width: $lg) {
+    padding: 20px;
+  }
+}
+
+.gap {
+  gap: 3rem;
+}
+
+.card {
+  background-color: $light;
+  padding: 0;
+  overflow: hidden;
+
+  .count {
+    font-size: 14px;
+    line-height: 20px;
+
+    @media screen and (min-width: $md) {
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    @media screen and (min-width: $lg) {
+      font-size: 24px;
+      line-height: 30px;
+    }
+  }
+
+  &__header {
+    background: url("../../../../assets/images/decore/2.svg") #F8F8F8;
+    background-size: contain;
+    background-position: right top;
+    background-repeat: no-repeat;
+    box-shadow:         0px 4px 8px 0px rgba(50, 50, 50, 0.6);
+
+    @media screen and (min-width: $lg) {
+      background: #F8F8F8;
+    }
+  }
+
+  &__text {
+    font-size: 10px;
+    line-height: 20px;
+
+    @media screen and (min-width: $lg) {
+      font-size: 14px;
+    }
+  }
+
+  &__body {
+    .body {
+      &__wrapper {
+        gap: 2rem;
+      }
+    }
+  }
+
+  &__token {
+    position: relative;
+
+    .token__wrapper {
+      position: absolute;
+      pointer-events: none;
+      top: 0px;
+      right: 0px;
+      gap: 0.4rem;
+      align-items: center;
+
+      p {
+        display: inline-block;
+        font-size: 14px;
+        line-height: 16px;
+        margin: 0;
+
+        @media screen and (min-width: $md) {
+          font-size: 16px;
+          line-height: 21px;
+        }
+
+        @media screen and (min-width: $lg) {
+          font-size: 24px;
+          line-height: 54px;
+        }
+      }
+
+      img {
+        height: 16px;
+        float: right;
+
+        @media screen and (min-width: $md) {
+          height: 21px;
+        }
+
+        @media screen and (min-width: $lg) {
+          height: 29px;
+        }
+      }
+    }
+  }
+}

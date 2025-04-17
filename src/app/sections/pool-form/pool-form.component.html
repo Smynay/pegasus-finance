@@ -1,0 +1,6 @@
+<section class="pool-form wrapper padding">
+  <ng-container *ngIf="poolToShow">
+    <h2 class="title_dashboard dark">Pool token - {{ poolToShow.symbol }}</h2>
+    <app-pool-card [poolInfo]="poolToShow"></app-pool-card>
+  </ng-container>
+</section>

@@ -1,0 +1,41 @@
+<div class="portfolio card">
+  <div class="row d-flex align-items-center">
+    <div class="col-12 col-md-4 mb-3 m-md-0 d-flex align-items-center">
+      <div class="portfolio__chart mx-auto" [class.large]="userPortfolio?.length > 2">
+        <canvas id="myPie"></canvas>
+      </div>
+    </div>
+    <div class="col-12 col-md-8">
+      <div class="portfolio__devider row" *ngIf="userPortfolio">
+        <div class="col-12 col-lg-7">
+          <div
+            class="portfolio__panel panel light"
+            *ngFor="let element of userPortfolio; let i = index"
+            [style.background]="chartColors[i % chartColors.length]"
+            [class.d-lg-none]="i > 1"
+          >
+            <span>{{ element.pool }}</span>
+            <span>{{ element.percentage }}% (${{ element.fullPrice }})</span>
+          </div>
+        </div>
+        <div class="col-12 col-lg-5">
+          <div class="portfolio__panel special panel d-lg-flex flex-lg-column align-items-center m-0">
+            <span>TOTAL AMOUNT</span>
+            <hr class="d-none d-lg-block m-0" />
+            <span>{{ 100 }}% (${{ +userPortfolio[0].generalPrice }})</span>
+          </div>
+        </div>
+        <div class="col-12 d-none d-lg-block">
+          <div
+            class="portfolio__panel panel light"
+            *ngFor="let element of portfolioPartTwo; let i = index"
+            [style.background]="chartColors[(i + 2) % chartColors.length]"
+          >
+            <span>{{ element.pool }}</span>
+            <span>{{ element.percentage }}% (${{ element.fullPrice }})</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

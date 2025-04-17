@@ -1,0 +1,15 @@
+<section id="pools" class="pools wrapper padding">
+  <h2 class="title light">POOLS</h2>
+  <div class="pools__cards row row-xs-12">
+    <app-simple-card
+      class="col col-12 col-md-6 wow"
+      *ngFor="let pool of pools; let i = index"
+      [poolInfo]="pool"
+      [decoreImg]="i % 2 ? customDecoreImg : null"
+      [attr.data-aos]="!(i % 2) ? 'fade-right' : 'fade-left'"
+      data-aos-easing="ease-out-cubic"
+      data-aos-duration="1000"
+      data-aos-offset="0"
+    ></app-simple-card>
+  </div>
+</section>

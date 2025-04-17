@@ -1,0 +1,70 @@
+@import "src/scss/_variables";
+
+.simple-card {
+  width: 100%;
+  min-width: 190px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  background: url("../../../../assets/images/decore/2.svg");
+  background-color: $light;
+  background-size: contain;
+  background-position: right 50px;
+  background-repeat: no-repeat;
+
+  &__data {
+    font-size: 12px;
+    line-height: 24px;
+
+    @media screen and (min-width: $lg) {
+      font-size: 14px;
+      line-height: 24px;
+    }
+
+    .count {
+      font-size: 16px;
+      line-height: 24px;
+
+      @media screen and (min-width: $lg) {
+        font-size: 24px;
+        line-height: 24px;
+      }
+    }
+  }
+
+  &__token {
+    .token {
+      display: flex;
+      flex-direction: row;
+      gap: 0.4rem;
+      align-items: center;
+
+      p {
+        display: inline-block;
+        font-size: 16px;
+        line-height: 21px;
+        margin: 0;
+
+        @media screen and (min-width: $lg) {
+          font-size: 24px;
+          line-height: 29px;
+        }
+      }
+
+      img {
+        height: 21px;
+
+        @media screen and (min-width: $lg) {
+          height: 29px;
+        }
+      }
+    }
+  }
+
+  &__decore {
+    position: absolute;
+    object-fit: cover;
+    max-height: 100%;
+  }
+}

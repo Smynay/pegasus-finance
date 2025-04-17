@@ -1,0 +1,5 @@
+<select class="form-select custom-select form-select-sm mr-4 d-none d-lg-block header__lang">
+  <option *ngFor="let lang of languages; let i = index" [value]="lang.locale" [selected]="i == 0">
+    {{ lang.title }}
+  </option>
+</select>

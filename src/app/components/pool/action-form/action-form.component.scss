@@ -1,0 +1,66 @@
+@import "src/scss/_variables";
+
+.form {
+  max-width: 240px;
+  margin: 0 auto;
+
+  &__title {
+    line-height: 37px;
+    text-transform: capitalize;
+  }
+
+  &__divider {
+    opacity: 0.33;
+  }
+
+  &__label {
+    opacity: 0.87;
+  }
+
+  &__field {
+    border-bottom: 1px solid rgba($dark, 0.33);
+    gap: 1rem;
+    transition: all 0.5s;
+
+    &:focus-within {
+      transition: all 0.5s;
+      border-bottom: 1px solid $dark;
+    }
+
+    .field {
+      &__icon {
+        height: 18px;
+      }
+
+      &__input {
+        min-width: 100px;
+        padding: 0;
+        text-align: right;
+        background: transparent;
+        border: none;
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+  }
+
+  &__button-max {
+    color: rgba($dark, 0.4);
+    cursor: pointer;
+
+    &:hover {
+      color: $dark;
+    }
+  }
+
+  &__button {
+    text-transform: uppercase;
+  }
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}

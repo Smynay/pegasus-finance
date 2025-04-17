@@ -1,0 +1,94 @@
+@import "src/scss/_variables";
+
+.popup {
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  gap: 6px;
+  cursor: default;
+  align-items: flex-end;
+  width: 250px;
+
+  &__wrapper {
+    height: 100%;
+    width: 100%;
+    background: rgba($light, 0.3);
+  }
+
+  &__backdrop {
+    position: absolute;
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 10;
+    border-radius: 19px;
+    padding: 1rem 0;
+    height: 110px;
+    width: 250px;
+    background: $light;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.3));
+  }
+
+  &__title {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  &__text {
+    font-size: 12px;
+    line-height: 24px;
+  }
+
+  &__icon {
+    height: 20px;
+  }
+
+  &__close {
+    cursor: pointer;
+  }
+}
+
+.loader {
+  display: inline-block;
+  position: relative;
+  width: 20px;
+  height: 20px;
+
+  & div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 3px solid $blue;
+    border-radius: 50%;
+    animation: loader 1.3s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: $blue transparent transparent transparent;
+
+    &:nth-child(1) {
+      animation-delay: -0.45s;
+    }
+    &:nth-child(2) {
+      animation-delay: -0.3s;
+    }
+    &:nth-child(3) {
+      animation-delay: -0.15s;
+    }
+  }
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

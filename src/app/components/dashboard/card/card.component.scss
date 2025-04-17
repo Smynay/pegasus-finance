@@ -1,0 +1,57 @@
+@import "src/scss/_variables";
+
+.card {
+  background: url("../../../../assets/images/decore/2.svg");
+  background-color: $light;
+  background-size: contain;
+  background-position: right top;
+  background-repeat: no-repeat;
+
+  .count {
+    font-size: 16px;
+    line-height: 20px;
+
+    @media screen and (min-width: $lg) {
+      font-size: 24px;
+      line-height: 30px;
+    }
+  }
+
+  &__text {
+    font-size: 10px;
+    line-height: 20px;
+
+    @media screen and (min-width: $lg) {
+      font-size: 14px;
+    }
+  }
+
+  &__token {
+    &.token {
+      display: flex;
+      flex-direction: row;
+      gap: 0.4rem;
+      align-items: center;
+
+      p {
+        display: inline-block;
+        font-size: 16px;
+        line-height: 21px;
+        margin: 0;
+
+        @media screen and (min-width: $lg) {
+          font-size: 24px;
+          line-height: 29px;
+        }
+      }
+
+      img {
+        height: 21px;
+
+        @media screen and (min-width: $lg) {
+          height: 29px;
+        }
+      }
+    }
+  }
+}

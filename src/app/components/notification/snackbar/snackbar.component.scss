@@ -1,0 +1,65 @@
+@import "src/scss/_variables";
+
+.bg {
+  &-red {
+    background: $red;
+  }
+
+  &-green {
+    background: $green;
+  }
+
+  &-blue {
+    background: $blue;
+  }
+}
+
+.snackbar {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  border-radius: 19px;
+  height: 28px;
+  padding: 0px 20px;
+  gap: 1rem;
+  width: 240px;
+  cursor: default;
+  filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.3));
+
+  &__wrapper {
+    height: 100%;
+    width: 100%;
+  }
+
+  @media screen and (min-width: $lg) {
+    height: 56px;
+    width: 340px;
+  }
+
+  &__icon {
+    color: $light;
+  }
+
+  &__link {
+    .snackbar__text {
+      cursor: pointer;
+    }
+  }
+
+  &__text {
+    font-size: 10px;
+    line-height: 24px;
+    padding: 0;
+    margin: 0;
+    color: $light;
+
+    @media screen and (min-width: $lg) {
+      font-size: 14px;
+    }
+  }
+
+  &__close {
+    color: $light;
+    cursor: pointer;
+  }
+}

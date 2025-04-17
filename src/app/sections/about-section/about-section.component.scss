@@ -1,0 +1,87 @@
+@import "src/scss/_variables";
+
+@mixin image($url, $position, $size) {
+  background: url($url) transparent;
+  background-position: $position;
+  background-repeat: no-repeat;
+  background-size: $size;
+}
+
+.about {
+  &__title {
+    margin-bottom: 1rem;
+  }
+
+  p {
+    max-width: 50%;
+    font-size: 12px;
+    line-height: 14px;
+    margin: 0;
+
+    @media screen and (min-width: $md) {
+      font-size: 21px;
+      line-height: 25px;
+    }
+  }
+
+  .block {
+    height: 150px;
+
+    @media screen and (min-width: $md) {
+      height: 275px;
+    }
+
+    @media screen and (min-width: $lg) {
+      height: 350px;
+    }
+  }
+
+  .first {
+    @include image("../../../assets/images/content/4.svg", left, 50% 100%);
+    background-size: contain;
+  }
+
+  .second {
+    @include image("../../../assets/images/content/5.svg", 108%, auto 90%);
+
+    @media screen and (min-width: $md) {
+      margin-top: -6%;
+      @include image("../../../assets/images/content/5.svg", 90%, auto 80%);
+    }
+
+    @media screen and (min-width: $lg) {
+      margin-top: -8%;
+    }
+  }
+
+  .third {
+    @include image("../../../assets/images/content/6.svg", 20%, auto 80%);
+
+    @media screen and (min-width: $md) {
+      margin-top: -10%;
+    }
+
+    @media screen and (min-width: $lg) {
+      margin-top: -8%;
+    }
+  }
+
+  &__buttons {
+    margin-top: -1rem;
+
+    @media screen and (min-width: $md) {
+      margin-top: -2rem;
+    }
+  }
+
+  .button {
+    margin-bottom: 1rem;
+    float: right;
+
+    margin-left: 1rem;
+
+    &:last-of-type {
+      margin: 0;
+    }
+  }
+}

@@ -1,0 +1,62 @@
+@import "src/scss/_variables";
+
+.blog {
+  background: $light;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  position: relative;
+  overflow: hidden;
+
+  &__title {
+    margin-top: 2rem;
+  }
+
+  &__container {
+    z-index: 1;
+    position: relative;
+    height: 230px;
+    overflow: hidden;
+
+    @media screen and (min-width: $md) {
+      height: auto;
+    }
+  }
+
+  &__fade {
+    height: 100%;
+    content: "";
+    z-index: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+    background: linear-gradient(180deg, transparent 40%, #fff 101%);
+  }
+
+  &__card {
+    margin-top: 1rem;
+  }
+
+  &__button {
+    margin-top: 2rem;
+  }
+
+  .decore {
+    &_first {
+      transform: rotate(180deg);
+      height: 580px;
+      width: 1072px;
+      left: 50%;
+      margin-left: -1500px;
+      top: 5%;
+    }
+
+    &_second {
+      left: 50%;
+      top: 30%;
+      height: 580px;
+      width: 1072px;
+      margin-left: 50px;
+    }
+  }
+}

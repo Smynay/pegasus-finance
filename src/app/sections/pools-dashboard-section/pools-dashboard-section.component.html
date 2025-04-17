@@ -1,0 +1,12 @@
+<section class="pools mb-4">
+  <div class="pools__wrapper wrapper padding">
+    <h2 class="title_dashboard dark">Pools</h2>
+    <div class="pools__cards">
+      <div class="row p-0 m-0">
+        <div class="pools__card col-12 col-lg-6 mb-4 m-lg-0" *ngFor="let pool of pools; let i = index">
+          <app-card [poolInfo]="pool"></app-card>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

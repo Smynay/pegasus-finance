@@ -1,0 +1,19 @@
+@import "src/scss/_variables";
+
+.pools {
+  &__card {
+    padding: 0;
+
+    &:nth-child(odd) {
+      @media screen and (min-width: $lg) {
+        padding-right: 0.75rem;
+      }
+    }
+
+    &:nth-child(even) {
+      @media screen and (min-width: $lg) {
+        padding-left: 0.75rem;
+      }
+    }
+  }
+}

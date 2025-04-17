@@ -1,0 +1,124 @@
+@import "src/scss/_variables";
+
+$menuHighliter: $accent;
+$light: #fff;
+$background: #007eaf;
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  background: $background;
+  height: 46px;
+  align-items: center;
+  filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.24));
+
+  @media screen and (min-width: $lg) {
+    height: 64px;
+  }
+
+  &__logo {
+    outline: transparent;
+    display: flex;
+    align-items: center;
+    height: 36px;
+    gap: 1rem;
+    cursor: pointer;
+
+    @media screen and (min-width: $lg) {
+      height: 60px;
+    }
+
+    .logo-text {
+      height: 66%;
+    }
+  }
+
+  img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+
+    li {
+      cursor: pointer;
+      color: $light;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      height: 100%;
+      padding: 0px 12px;
+      position: relative;
+
+      a {
+        color: inherit;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        height: 100%;
+      }
+
+      &:focus {
+        outline: none;
+      }
+
+      &::before {
+        content: "";
+        width: 100%;
+        height: 2px;
+        background: $accent;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transform-origin: right;
+        transform: scaleX(0);
+        transition: transform cubic-bezier(0.165, 0.84, 0.44, 1) 0.2s;
+      }
+
+      &:hover {
+        &:before {
+          transform: scaleX(1);
+          transform-origin: left;
+        }
+      }
+    }
+  }
+
+  &__addition {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__burger {
+    @mixin line {
+      width: 18px;
+      height: 2px;
+      background: $light;
+    }
+
+    @include line;
+    position: relative;
+
+    &::before,
+    &::after {
+      @include line;
+      position: absolute;
+      content: "";
+      left: 0px;
+    }
+
+    &::before {
+      top: -5px;
+    }
+
+    &::after {
+      top: 5px;
+    }
+  }
+}

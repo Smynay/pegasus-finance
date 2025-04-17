@@ -1,0 +1,14 @@
+@import "src/scss/_variables";
+
+.portfolio {
+  width: 100%;
+  min-height: 350px;
+
+  @media screen and (min-width: $md) {
+    min-height: 270px;
+  }
+
+  @media screen and (min-width: $lg) {
+    min-height: 180px;
+  }
+}

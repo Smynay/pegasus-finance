@@ -1,1 +1,96 @@
 /* You can add global styles to this file, and also import other style files */
+@import "./scss/_variables";
+@import "./scss/bootstrap";
+
+@import "./scss/button.scss";
+@import "./scss/card.scss";
+@import "./scss/title.scss";
+@import "./scss/panel.scss";
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.mat-drawer-content {
+  overflow-x: hidden !important;
+}
+
+.accent {
+  color: $accent;
+}
+
+.blue {
+  color: $blue;
+}
+
+.dark {
+  color: $dark;
+}
+
+.light {
+  color: $light;
+}
+
+.green {
+  color: $green;
+}
+
+.red {
+  color: $red;
+}
+
+.wrapper {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.padding {
+  padding: 0px 25px;
+
+  @media screen and (min-width: $md) {
+    padding: 0px 32px;
+  }
+
+  @media screen and (min-width: $lg) {
+    padding: 0px 70px;
+  }
+
+  &-left {
+    padding-right: 0px;
+  }
+
+  &-right {
+    padding-left: 0px;
+  }
+}
+
+.margin {
+  margin-top: 30px;
+
+  @media screen and (min-width: $md) {
+    margin-top: 50px;
+  }
+
+  @media screen and (min-width: $lg) {
+    margin-top: 100px;
+  }
+}
+
+.decore {
+  display: none;
+  position: absolute;
+  pointer-events: none;
+  z-index: 0;
+  background-image: url("assets/images/decore/4.svg");
+  background-repeat: no-repeat;
+  background-position: contain;
+
+  @media screen and (min-width: $lg) {
+    display: block;
+  }
+}

@@ -1,0 +1,21 @@
+<header class="header container-fluid row mx-0">
+  <div class="col-6 px-0 col-lg-4">
+    <div class="header__logo" routerLink="/">
+      <img [src]="logo" class="logo" alt="Company logo" />
+      <img [src]="logoText" class="logo-text d-none d-lg-block" alt="Company logo text" />
+    </div>
+  </div>
+  <ul class="col-6 px-0 col-lg-4 header__menu d-none d-lg-flex justify-content-center">
+    <li *ngFor="let item of menuService.homeMenu">
+      <a [href]="item.path" (click)="scrollTo($event, item.path)">{{ item.title }}</a>
+    </li>
+  </ul>
+
+  <div class="col-6 px-0 col-lg-4 d-flex justify-content-end">
+    <div class="header__addition">
+      <button class="button button_flat-dark d-none d-lg-block" routerLink="/dashboard">OPEN APP</button>
+      <button class="button button_flat-dark button_rounded d-lg-none" routerLink="/dashboard">APP</button>
+      <div class="header__burger d-lg-none" (click)="emitBurgerClick()"></div>
+    </div>
+  </div>
+</header>

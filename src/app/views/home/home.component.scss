@@ -1,0 +1,129 @@
+@import "src/scss/_variables";
+
+.drawer {
+  &-sidenav {
+    padding: 1rem;
+    width: 100%;
+    background: $blue;
+
+    &__menu {
+      a {
+        color: inherit;
+        text-decoration: none;
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+
+    .title {
+      margin: 0;
+    }
+
+    @media screen and (min-width: $md) {
+      width: 30%;
+    }
+
+    &-content {
+      .header {
+        position: fixed;
+        z-index: 100;
+      }
+
+      .content__box {
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        main {
+          margin-top: 40px;
+          position: relative;
+
+          @media screen and (min-width: $lg) {
+            margin-top: 64px;
+          }
+        }
+      }
+    }
+
+    &__header {
+      mat-icon {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+main {
+  .gradient {
+    overflow: hidden;
+    background: linear-gradient(
+      180deg,
+      #007eaf 4.49%,
+      #24126a 20.65%,
+      #24126a 30.55%,
+      #007eaf 40.5%,
+      #007eaf 58.02%,
+      #24126a 69.49%,
+      #24126a 84.5%,
+      #007eaf 99.53%
+    );
+    padding-bottom: 100px;
+  }
+
+  .content {
+    position: relative;
+    z-index: 2;
+  }
+
+  .decorations {
+    z-index: 1;
+  }
+}
+
+.decore {
+  z-index: 0;
+  opacity: 0.8;
+
+  &_first {
+    transform: rotate(180deg);
+    height: 580px;
+    width: 1072px;
+    left: 50%;
+    margin-left: -1500px;
+    top: 8%;
+  }
+
+  &_second {
+    left: 50%;
+    top: 723px;
+    height: 580px;
+    width: 1072px;
+    margin-left: 150px;
+  }
+
+  &_third {
+    left: 50%;
+    top: 1650px;
+    height: 580px;
+    width: 1072px;
+    margin-left: 360px;
+  }
+
+  &_fourth {
+    transform: rotate(180deg);
+    height: 580px;
+    width: 1072px;
+    left: 50%;
+    margin-left: -1300px;
+    top: 1700px;
+  }
+
+  &_fifth {
+    height: 580px;
+    width: 1072px;
+    left: 50%;
+    margin-left: -600px;
+    top: 2220px;
+  }
+}

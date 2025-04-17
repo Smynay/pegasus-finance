@@ -1,0 +1,34 @@
+// Breakpoints
+$sm: 290px;
+$md: 450px;
+$lg: 1024px;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: $sm,
+  md: $md,
+  lg: $lg,
+);
+
+$container-min-widths: (
+  xs: 0,
+  sm: $sm,
+  md: $md,
+  lg: $lg,
+);
+
+$container-max-widths: (
+  xs: $sm,
+  sm: $md,
+  md: $lg,
+  lg: 5000px,
+);
+
+// Colors
+$dark: #24126a;
+$blue: #007eaf;
+$light: #fff;
+$accent: #00e5e5;
+$grey: #f8f8f8;
+$green: #43a047;
+$red: #b00020;

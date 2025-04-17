@@ -1,0 +1,106 @@
+@import "src/scss/_variables";
+
+$menuHighliter: $accent;
+$light: #fff;
+$background: $light;
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  background: $background;
+  height: 46px;
+  align-items: center;
+  filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.24));
+
+  @media screen and (min-width: $lg) {
+    height: 64px;
+  }
+
+  &__logo {
+    outline: transparent;
+    display: flex;
+    align-items: center;
+    height: 36px;
+    gap: 1rem;
+    cursor: pointer;
+
+    @media screen and (min-width: $lg) {
+      height: 60px;
+    }
+
+    .logo-text {
+      height: 66%;
+    }
+  }
+  &__lang {
+    flex: 1;
+  }
+  &__connect {
+    width: 210px;
+  }
+
+  img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+
+    li {
+      cursor: pointer;
+      color: $light;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      height: 100%;
+      padding: 0px 12px;
+
+      &:hover {
+        border-top: 2px solid transparent;
+        border-bottom: 2px solid $menuHighliter;
+      }
+    }
+  }
+
+  &__addition {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    button:focus {
+      box-shadow: none;
+    }
+  }
+
+  &__burger {
+    @mixin line {
+      width: 18px;
+      height: 2px;
+      background: $dark;
+    }
+
+    @include line;
+    position: relative;
+
+    &::before,
+    &::after {
+      @include line;
+      position: absolute;
+      content: "";
+      left: 0px;
+    }
+
+    &::before {
+      top: -5px;
+    }
+
+    &::after {
+      top: 5px;
+    }
+  }
+}

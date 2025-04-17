@@ -1,10 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
+
+import { ModalService } from "./services/modal.service";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.scss"],
 })
-export class AppComponent {
-  title = 'pegasus-finance';
+export class AppComponent implements OnInit {
+  title = "pegasus-finance";
+
+  constructor(public modalService: ModalService) {}
+
+  ngOnInit() {}
 }
